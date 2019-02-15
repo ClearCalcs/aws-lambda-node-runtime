@@ -8,4 +8,4 @@ export NODE_PATH="${DIR}/node_modules"
 
 cd "${LAMBDA_TASK_ROOT}"
 
-exec "${DIR}/node" "${DIR}/runtime.js"
+exec "${DIR}/node" "--icu-data-dir=${DIR}/node_modules/icu4c-data" "${DIR}/runtime.js"
